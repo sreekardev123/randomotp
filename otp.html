@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn{
+            background-color: green;
+            color: azure;
+            padding: 10px;
+            margin-top: 300px;
+            margin-left: 300px;
+            font-size: larger;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="colorCode"></div> 
+    <div id="quotes" ></div>
+    <button id="btn">Click me</button>
+<script>
+
+         color = () => {
+            let hexNumbers = "0123456789ABCDEF";
+            let hexColorCode = "#"
+            for (let i = 0; i < 6; i++) {
+                hexColorCode += hexNumbers[Math.floor(Math.random() * 14)];
+            }
+            return hexColorCode;
+        }
+        
+        let btn = document.getElementById("btn");
+            btn.addEventListener("click", () => {
+            document.body.style.backgroundColor = color();
+            document.getElementById("colorCode").innerHTML = color();
+           
+        });
+
+
+    
+
+   
+   
+    
+   </script>
+    
+    
+</body>
+</html>
